@@ -19,7 +19,7 @@ export const createCompany = (req, res) => {
 };
 
 export const fetchCompanies = (req, res) => {
-  Company.find({}).sort({ name: 1 })
+  Company.find({}).sort({ contacts: -1 })
     .then((companies) => {
       res.json(companies);
     })
